@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mantra Player">
+    <rect width="512" height="512" rx="96" fill="#ece8dd"/>
+    <circle cx="256" cy="256" r="188" fill="#315f52"/>
+    <circle cx="256" cy="256" r="142" fill="#eadcc7"/>
+    <circle cx="256" cy="256" r="94" fill="#fffaf0"/>
+    <path fill="#b96f24" d="M256 115c12 40 41 69 81 81-40 12-69 41-81 81-12-40-41-69-81-81 40-12 69-41 81-81Z"/>
+    <path fill="#315f52" d="M256 212c22 0 40 18 40 40s-18 40-40 40-40-18-40-40 18-40 40-40Z"/>
+    <path fill="#8e4e14" d="M194 356h124v34H194z"/>
+</svg>

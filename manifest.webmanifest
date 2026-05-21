@@ -1,0 +1,19 @@
+{
+    "name": "Mantra Music Player",
+    "short_name": "Mantra Player",
+    "description": "An offline-ready mantra music player with a 108 play counter.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#ece8dd",
+    "theme_color": "#ece8dd",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

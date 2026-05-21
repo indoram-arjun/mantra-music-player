@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ece8dd">
+    <meta name="description" content="An offline-ready mantra music player with a 108 play counter.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Mantra Player">
+    <title>Music Player for Mantras</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="music-player" aria-label="Mantra music player">
+            <div class="app-actions">
+                <button id="installButton" class="install-button" type="button" hidden>Install App</button>
+            </div>
+
+            <div class="artwork" aria-hidden="true">
+                <div class="artwork-ring"></div>
+                <div class="artwork-core">
+                    <span>Pratam Nam</span>
+                </div>
+            </div>
+
+            <div class="track-info">
+                <p class="eyebrow">Daily Mantra</p>
+                <h1>Mantra Music Player</h1>
+                <p id="trackName" class="track-name">mantra.wav</p>
+            </div>
+
+            <audio id="audio" preload="metadata" src="mantra.wav"></audio>
+
+            <div id="counterPanel" class="counter-panel" aria-label="108 play counter">
+                <div class="counter-top">
+                    <div>
+                        <p class="counter-label">108 Counter</p>
+                        <p id="counterMessage" class="counter-message">0 of 108 plays complete</p>
+                    </div>
+                    <button id="resetCounterButton" class="reset-counter" type="button" aria-label="Reset 108 counter">Reset</button>
+                </div>
+                <div class="counter-count">
+                    <span id="playCount">0</span>
+                    <span>/ 108</span>
+                </div>
+                <div class="counter-track" aria-hidden="true">
+                    <div id="counterFill" class="counter-fill"></div>
+                </div>
+            </div>
+
+            <div class="time-row" aria-label="Track progress">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <label class="visually-hidden" for="progress">Seek through track</label>
+            <input id="progress" class="progress-slider" type="range" min="0" max="100" value="0" step="0.1">
+
+            <div class="controls" aria-label="Playback controls">
+                <button id="stopButton" class="control-button secondary" type="button" aria-label="Stop">
+                    <span aria-hidden="true">&#9632;</span>
+                </button>
+                <button id="playButton" class="control-button primary" type="button" aria-label="Play">
+                    <span aria-hidden="true">&#9658;</span>
+                </button>
+            </div>
+
+            <button id="autoPlayButton" class="auto-button" type="button" aria-pressed="false">
+                Auto 108
+            </button>
+
+            <div class="volume-row">
+                <label for="volume">Volume</label>
+                <input id="volume" class="volume-slider" type="range" min="0" max="1" value="0.75" step="0.01">
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">Ready to play</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
